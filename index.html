@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>QuadBot</title>
+    <link href='https://unpkg.com/boxicons@2.1.4/css/boxicons.min.css' rel='stylesheet'>
+    <link rel="stylesheet" href="{{url_for('static',filename='styles.css')}}">
+</head>
+<body>
+    <div class="chat-button" onclick="toggleChat()">
+        <i class='bx bx-chat bx-lg'></i>
+    </div>
+    <div class="chat-container">
+        <h2 style="text-align: center; color: #312e2e; margin-bottom: 15px;">QuadBot</h2>
+        <div id="chat-box"></div>
+        <div class="button-container">
+            <input type="text" id="user-input" placeholder="Type a message...">
+            <button id="start-btn" onclick="startListening()"><i class='bx bx-microphone bx-md'></i></button>
+            <button id="send" onclick="sendMessage()"><i class='bx bx-send bx-md'></i></button>
+        </div>
+    </div>
+    <script src="{{url_for('static',filename='script.js')}}"></script>
+</body>
+</html>
